@@ -19,7 +19,7 @@ app.get("/", (req, res) => {
 })
 app.post('/register', async(req, res) => {
     const { email, newPassword } = req.body;
-    const userExist = await User.findOne({ email });
+    const userExist = await RegisterModel.findOne({ email });
     console.log(userExist);
     // Find the user by email in the mock database
     //const user = users.find((user) => user.email === email);
