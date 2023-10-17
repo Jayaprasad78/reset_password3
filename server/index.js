@@ -4,13 +4,11 @@ const cors = require('cors')
 const RegisterModel = require('./models/Register')
 
 const app = express()
-app.use(cors(
-    {
-        origin: ["https://reset-password3-frontend.vercel.app/"],
-        methods: ["POST", "GET"],
-        credentials: true
-    }
-));
+app.use(cors({
+    origin: 'https://reset-password3-frontend.vercel.app',
+    methods: ['POST', 'GET'],
+    credentials: true,  // If you need to pass cookies or credentials in the request
+}));
 app.use(express.json())
 
 mongoose.connect('mongodb+srv://jayaprasadb718:9632119392Jp78m@cluster0.bhccjgv.mongodb.net/userdata?retryWrites=true&w=majority');
