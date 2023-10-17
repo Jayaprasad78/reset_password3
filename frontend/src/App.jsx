@@ -20,7 +20,7 @@ const handleSubmit = (e) => {
 
   // Send a POST request to the backend using Axios
   axios
-    .post("/https://deploy-mern-api.vercel.app/register", { email, newPassword })
+    .post("https://reset-password3-api.vercel.app/register", { email, newPassword })
     .then((response) => {
       // Handle the response from the API
       window.alert("password changed successfully");
